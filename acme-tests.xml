@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ACME Demo App Test Suite" verbose="2" thread-count="2" parallel="methods">
+    <description>Test suite for ACME Demo App Login Tests</description>
+    
+    <!-- Test for ACME Demo App Navigation and Login -->
+    <test name="ACME Demo App Login Tests">
+        <description>Navigation and login tests for ACME Demo App (https://demo.applitools.com/)</description>
+        <classes>
+            <class name="com.keyworddriven.tests.LoginTests">
+                <methods>
+                    <!-- Test Case 1: Navigation Test -->
+                    <include name="testNavigateToAcmeDemoApp" />
+                    
+                    <!-- Test Case 2: Form Elements Visibility Test -->
+                    <include name="testLoginFormElementsAreVisible" />
+                    
+                    <!-- Test Case 3: Login with Valid Credentials -->
+                    <include name="testLoginWithValidCredentials" />
+                    
+                    <!-- Test Case 4: Username Entry Test -->
+                    <include name="testEnterUsername" />
+                    
+                    <!-- Test Case 5: Password Entry Test -->
+                    <include name="testEnterPassword" />
+                    
+                    <!-- Test Case 6: Remember Me Checkbox Test -->
+                    <include name="testRememberMeCheckbox" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
